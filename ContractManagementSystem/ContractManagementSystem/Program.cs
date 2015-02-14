@@ -19,5 +19,4 @@ namespace ContractManagementSystem
             Application.Run(new MainMenu());
         }
     }
-}      //Test comment by jack.
-       //Test comment by nathan.
+}
