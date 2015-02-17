@@ -33,6 +33,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -48,10 +52,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +128,38 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Details";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(240, 212);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(131, 20);
+            this.textBox9.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(210, 215);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Fax";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(82, 212);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(106, 20);
+            this.textBox8.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 215);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Home Phone";
             // 
             // label9
             // 
@@ -250,38 +282,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Title";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 215);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Home Phone";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(82, 212);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(106, 20);
-            this.textBox8.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(210, 215);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Fax";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(240, 212);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(131, 20);
-            this.textBox9.TabIndex = 24;
-            // 
             // CreateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +294,7 @@
             this.Name = "CreateCustomer";
             this.ShowIcon = false;
             this.Text = "CreateCustomer";
+            this.Load += new System.EventHandler(this.CreateCustomer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

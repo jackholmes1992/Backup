@@ -53,6 +53,12 @@
     <Compile Include="CreateCustomer.Designer.cs">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindCustomer.Designer.cs">
+      <DependentUpon>FindCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateCustomer.resx">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindCustomer.resx">
+      <DependentUpon>FindCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

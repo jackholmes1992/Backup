@@ -21,5 +21,10 @@ namespace ContractManagementSystem
         {
             this.Close();
         }
+
+        private void CreateCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
