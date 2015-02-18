@@ -19,7 +19,8 @@ namespace ContractManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            CreateCustomer openForm = new CreateCustomer();
+            openForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
