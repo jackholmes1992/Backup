@@ -20,7 +20,6 @@ namespace ContractManagementSystem
 
         OleDbConnection myConn = new OleDbConnection();
       
-
         private void FindCustomer_Load(object sender, EventArgs e)
         {
 
@@ -53,13 +52,31 @@ namespace ContractManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                myConn.ConnectionString = connectionDetails.dbsource;
+                OleDbCommand myCmd = myConn.CreateCommand();
 
+                myCmd.CommandText = "Select Forename, Surname From CUSTOMER" + " Where CustomerNo = @cusNo";
+                myCmd.Parameters.AddWithValue("cusNo", textBox1.Text);
+
+                myConn.Open();
+                OleDbDataReader myDR = myCmd.ExecuteReader();
+                myDR.Read();
+                textBox3.Text = myDR[0].ToString();
+                textBox4.Text = myDR[1].ToString();
+                //MessageBox.Show("connected");
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
-            //This is a temporary button for testing the connection :)  
         {
-           
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
