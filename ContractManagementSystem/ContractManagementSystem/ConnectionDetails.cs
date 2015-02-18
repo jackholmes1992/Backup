@@ -9,6 +9,6 @@ namespace ContractManagementSystem
     class connectionDetails
     {
         public static readonly string
-            dbsource = "Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=../../../../ANA.accdb;";
+            dbsource = "Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source = ..\..\" + @"ANA.accdb";
     }
 }
