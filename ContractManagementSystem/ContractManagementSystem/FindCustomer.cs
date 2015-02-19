@@ -19,7 +19,7 @@ namespace ContractManagementSystem
         }
 
         OleDbConnection myConn = new OleDbConnection();
-      
+
         private void FindCustomer_Load(object sender, EventArgs e)
         {
 
@@ -52,6 +52,47 @@ namespace ContractManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            myConn.ConnectionString = connectionDetails.dbsource;
+
+            //SQL to return all transactions on card in specified timeframe, ordered by date
+            string sql =@"Select Title, Forename, Surname, AddressLine1, AddressLine2,
+                        Town, County, Postcode, HomePhone, WorkPhone, Fax From CUSTOMER"
+                        + " Where CustomerNo = @cusNo";
+
+            //create DataAdapter and assign SQL instruction and Connection
+            OleDbDataAdapter myDA = new OleDbDataAdapter(sql, myConn);
+
+            //fill parameters
+            myDA.SelectCommand.Parameters.AddWithValue("@cusNo", textBox1.Text);
+
+            //create DataTable to hold result...
+            DataTable dtCustomer = new DataTable();
+            //pull data from Db into DataTable
+            myDA.Fill(dtCustomer);
+
+            //link DataTable to the DataGridView control
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = dtCustomer;
+
+            /* //SIMPLY FORMATS CELLS - WE MIGHT NEED THIS LATER
+            //configure DataGridView display options
+            dataGridView1.Columns[0].DefaultCellStyle.Format = "D";  //format this column as a date  
+            dataGridView1.Columns[2].DefaultCellStyle.Format = "C";  //format this column as a currency
+            dataGridView1.Columns[0].HeaderText = "Date";
+            dataGridView1.Columns[1].HeaderText = "Action";
+            dataGridView1.Columns[2].HeaderText = "Amount";
+            dataGridView1.Columns[0].Width = 160;
+            */
+            dataGridView1.ReadOnly = true;
+
+
+
+
+
+
+
+
+/*
             try
             {
                 myConn.ConnectionString = connectionDetails.dbsource;
@@ -72,6 +113,7 @@ namespace ContractManagementSystem
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+*/
         }
 
         private void button4_Click(object sender, EventArgs e)
