@@ -55,15 +55,15 @@ namespace ContractManagementSystem
             myConn.ConnectionString = connectionDetails.dbsource;
 
             //SQL to return all transactions on card in specified timeframe, ordered by date
-            string sql =@"Select Title, Forename, Surname, AddressLine1, AddressLine2,
+            string sql =@"Select CustomerNo, Title, Forename, Surname, AddressLine1, AddressLine2,
                         Town, County, Postcode, HomePhone, WorkPhone, Fax From CUSTOMER"
-                        + " Where CustomerNo = @cusNo";
+                        + " Where Forename = @cusName";
 
             //create DataAdapter and assign SQL instruction and Connection
             OleDbDataAdapter myDA = new OleDbDataAdapter(sql, myConn);
 
             //fill parameters
-            myDA.SelectCommand.Parameters.AddWithValue("@cusNo", textBox1.Text);
+            myDA.SelectCommand.Parameters.AddWithValue("@cusName", textBox1.Text);
 
             //create DataTable to hold result...
             DataTable dtCustomer = new DataTable();

@@ -31,7 +31,6 @@ C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSyste
 C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\obj\Debug\ContractManagementSystem.pdb
 C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\bin\Debug\ContractManagementSystem.exe
 C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\bin\Debug\ContractManagementSystem.pdb
-C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\obj\Debug\ContractManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\obj\Debug\ContractManagementSystem.CreateCustomer.resources
 C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\obj\Debug\ContractManagementSystem.MainMenu.resources
 C:\Users\Jack\Documents\GitHub\TeamProjectComputingAlpha\ContractManagementSystem\ContractManagementSystem\obj\Debug\ContractManagementSystem.Properties.Resources.resources
